@@ -1,250 +1,437 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Sadashiva Patil</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:'Montserrat',sans-serif;
-        }
+<title>Contact | Sadashiva Patil</title>
 
-        body{
-            background:linear-gradient(135deg,#0f172a,#1e293b,#0f172a);
-            color:white;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        nav{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            padding:20px 10%;
-            background:rgba(0,0,0,0.3);
-            backdrop-filter:blur(10px);
-        }
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-        .logo{
-            font-size:1.8rem;
-            font-weight:700;
-            color:#38bdf8;
-        }
+<style>
 
-        .nav-links a{
-            color:white;
-            text-decoration:none;
-            margin-left:20px;
-            transition:.3s;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Montserrat',sans-serif;
+}
 
-        .nav-links a:hover{
-            color:#38bdf8;
-        }
+body{
+background:#050816;
+color:white;
+}
 
-        .container{
-            max-width:1100px;
-            margin:auto;
-            padding:60px 20px;
-        }
+nav{
+position:sticky;
+top:0;
+z-index:1000;
+padding:20px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.3);
+backdrop-filter:blur(10px);
+}
 
-        .hero{
-            text-align:center;
-            margin-bottom:50px;
-        }
+.logo{
+font-size:1.8rem;
+font-weight:700;
+color:#00d4ff;
+}
 
-        .hero h1{
-            font-size:3rem;
-            color:#38bdf8;
-        }
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
 
-        .hero p{
-            margin-top:10px;
-            color:#cbd5e1;
-        }
+nav a{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
 
-        .contact-wrapper{
-            display:grid;
-            grid-template-columns:1fr 1fr;
-            gap:30px;
-        }
+nav a:hover{
+color:#00d4ff;
+}
 
-        .contact-info,
-        .contact-form{
-            background:rgba(255,255,255,0.08);
-            padding:30px;
-            border-radius:20px;
-        }
+.hero{
+text-align:center;
+padding:80px 20px;
+}
 
-        .contact-info h2,
-        .contact-form h2{
-            color:#38bdf8;
-            margin-bottom:20px;
-        }
+.hero h1{
+font-size:3rem;
+color:#00d4ff;
+margin-bottom:15px;
+}
 
-        .contact-info p{
-            margin-bottom:15px;
-            line-height:1.8;
-        }
+.hero p{
+color:#cbd5e1;
+}
 
-        .social-links{
-            display:flex;
-            flex-wrap:wrap;
-            gap:10px;
-            margin-top:20px;
-        }
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+padding-bottom:80px;
+}
 
-        .social-links a{
-            text-decoration:none;
-            color:#38bdf8;
-            border:2px solid #38bdf8;
-            padding:10px 15px;
-            border-radius:30px;
-            transition:.3s;
-        }
+.contact-wrapper{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
 
-        .social-links a:hover{
-            background:#38bdf8;
-            color:white;
-        }
+.contact-card,
+.form-card{
 
-        .contact-form input,
-        .contact-form textarea{
-            width:100%;
-            padding:15px;
-            margin-bottom:15px;
-            border:none;
-            border-radius:10px;
-            background:#1e293b;
-            color:white;
-        }
+background:rgba(255,255,255,0.05);
 
-        .contact-form textarea{
-            resize:none;
-            height:150px;
-        }
+border:1px solid rgba(255,255,255,0.1);
 
-        .contact-form button{
-            background:#38bdf8;
-            color:white;
-            border:none;
-            padding:12px 25px;
-            border-radius:30px;
-            cursor:pointer;
-            font-size:1rem;
-            transition:.3s;
-        }
+backdrop-filter:blur(10px);
 
-        .contact-form button:hover{
-            transform:scale(1.05);
-            box-shadow:0 0 15px #38bdf8;
-        }
+padding:35px;
 
-        footer{
-            text-align:center;
-            padding:20px;
-            background:#020617;
-            margin-top:50px;
-        }
+border-radius:25px;
 
-        @media(max-width:768px){
-            .contact-wrapper{
-                grid-template-columns:1fr;
-            }
+transition:.4s;
 
-            .hero h1{
-                font-size:2.2rem;
-            }
-        }
-    </style>
+}
+
+.contact-card:hover,
+.form-card:hover{
+
+box-shadow:0 0 25px rgba(0,212,255,.4);
+
+}
+
+.contact-card h2,
+.form-card h2{
+
+color:#00d4ff;
+
+margin-bottom:20px;
+
+}
+
+.contact-card p{
+
+line-height:1.8;
+
+color:#cbd5e1;
+
+margin-bottom:20px;
+
+}
+
+.socials{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:15px;
+
+margin-top:20px;
+
+}
+
+.social{
+
+background:#0f172a;
+
+padding:15px;
+
+border-radius:15px;
+
+text-align:center;
+
+text-decoration:none;
+
+color:white;
+
+transition:.3s;
+
+}
+
+.social:hover{
+
+background:#00d4ff;
+
+color:black;
+
+transform:translateY(-5px);
+
+}
+
+.social i{
+
+font-size:1.5rem;
+
+margin-bottom:10px;
+
+display:block;
+
+}
+
+input,
+textarea{
+
+width:100%;
+
+padding:15px;
+
+margin-bottom:15px;
+
+border:none;
+
+outline:none;
+
+border-radius:12px;
+
+background:#0f172a;
+
+color:white;
+
+}
+
+textarea{
+
+height:150px;
+
+resize:none;
+
+}
+
+button{
+
+padding:14px 25px;
+
+border:none;
+
+border-radius:30px;
+
+background:#00d4ff;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:translateY(-5px);
+
+}
+
+.resume-btn{
+
+display:inline-block;
+
+margin-top:20px;
+
+padding:12px 25px;
+
+background:#00d4ff;
+
+color:black;
+
+text-decoration:none;
+
+border-radius:30px;
+
+font-weight:600;
+
+}
+
+footer{
+
+padding:25px;
+
+text-align:center;
+
+background:#020617;
+
+}
+
+@media(max-width:900px){
+
+.contact-wrapper{
+
+grid-template-columns:1fr;
+
+}
+
+.hero h1{
+
+font-size:2.2rem;
+
+}
+
+.socials{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-    <nav>
-        <div class="logo">TechSada</div>
+<nav>
 
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
+<div class="logo">
+Sadashiva
+</div>
 
-    <div class="container">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="skills.html">Skills</a></li>
+<li><a href="languages.html">Languages</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="volunteering.html">Volunteering</a></li>
+</ul>
 
-        <div class="hero">
-            <h1>Get In Touch</h1>
-            <p>Let's connect and build something amazing together.</p>
-        </div>
+</nav>
 
-        <div class="contact-wrapper">
+<section class="hero">
 
-            <div class="contact-info">
+<h1>Get In Touch</h1>
 
-                <h2>Connect With Me</h2>
+<p>
+Let's Build Something Innovative Together
+</p>
 
-                <p>
-                    I'm always interested in discussing robotics,
-                    AI, technology, projects, internships, and collaborations.
-                </p>
+</section>
 
-                <p><strong>Name:</strong> Sadashiva Patil</p>
-                <p><strong>Role:</strong> Robotics & AI Student</p>
+<div class="container">
 
-                <div class="social-links">
+<div class="contact-wrapper">
 
-                    <a href="https://github.com/sadashivaipatil/sada" target="_blank">
-                        GitHub
-                    </a>
+<div class="contact-card">
 
-                    <a href="https://www.youtube.com/@TechSada" target="_blank">
-                        YouTube
-                    </a>
+<h2>Contact Information</h2>
 
-                    <a href="https://www.linkedin.com/in/sadashivaipatil/" target="_blank">
-                        LinkedIn
-                    </a>
+<p>
 
-                    <a href="https://www.instagram.com/sadashivaipatil/" target="_blank">
-                        Instagram
-                    </a>
+I'm always interested in discussing robotics,
+automation, embedded systems, research,
+projects and collaborations.
 
-                </div>
+Feel free to connect with me through any of
+the platforms below.
 
-            </div>
+</p>
 
-            <div class="contact-form">
+<div class="socials">
 
-                <h2>Send a Message</h2>
+<a class="social"
+href="https://github.com/sadashivaipatil/sada"
+target="_blank">
 
-                <form>
+<i class="fab fa-github"></i>
 
-                    <input type="text" placeholder="Your Name" required>
+GitHub
 
-                    <input type="email" placeholder="Your Email" required>
+</a>
 
-                    <textarea placeholder="Your Message"></textarea>
+<a class="social"
+href="https://www.linkedin.com/in/sadashivaipatil/"
+target="_blank">
 
-                    <button type="submit">Send Message</button>
+<i class="fab fa-linkedin"></i>
 
-                </form>
+LinkedIn
 
-            </div>
+</a>
 
-        </div>
+<a class="social"
+href="https://www.youtube.com/@TechSada"
+target="_blank">
 
-    </div>
+<i class="fab fa-youtube"></i>
 
-    <footer>
-        <p>© 2026 Sadashiva Patil | TechSada</p>
-    </footer>
+YouTube
+
+</a>
+
+<a class="social"
+href="https://www.instagram.com/sadashivaipatil/"
+target="_blank">
+
+<i class="fab fa-instagram"></i>
+
+Instagram
+
+</a>
+
+</div>
+
+<a href="static/files/SadashivaIPatil_Resume.pdf"
+download
+class="resume-btn">
+
+Download Resume
+
+</a>
+
+</div>
+
+<div class="form-card">
+
+<h2>Send a Message</h2>
+
+<form>
+
+<input
+type="text"
+placeholder="Your Name"
+required>
+
+<input
+type="email"
+placeholder="Your Email"
+required>
+
+<textarea
+placeholder="Your Message"></textarea>
+
+<button type="submit">
+
+Send Message
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 Sadashiva Patil
+
+</footer>
 
 </body>
+
 </html>
-```
