@@ -1,0 +1,204 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Sadashiva Patil</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Montserrat',sans-serif;
+        }
+
+        body{
+            background:linear-gradient(135deg,#0f172a,#1e293b,#0f172a);
+            color:white;
+        }
+
+        nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:20px 10%;
+            background:rgba(0,0,0,0.3);
+            backdrop-filter:blur(10px);
+        }
+
+        .logo{
+            font-size:1.8rem;
+            font-weight:700;
+            color:#38bdf8;
+        }
+
+        .nav-links a{
+            color:white;
+            text-decoration:none;
+            margin-left:20px;
+            transition:0.3s;
+        }
+
+        .nav-links a:hover{
+            color:#38bdf8;
+        }
+
+        .container{
+            max-width:1100px;
+            margin:auto;
+            padding:60px 20px;
+        }
+
+        .hero{
+            text-align:center;
+            margin-bottom:60px;
+        }
+
+        .hero h1{
+            font-size:3rem;
+            color:#38bdf8;
+            margin-bottom:15px;
+        }
+
+        .hero p{
+            font-size:1.2rem;
+            color:#cbd5e1;
+        }
+
+        .card{
+            background:rgba(255,255,255,0.08);
+            padding:30px;
+            border-radius:20px;
+            margin-bottom:30px;
+            transition:0.4s;
+        }
+
+        .card:hover{
+            transform:translateY(-5px);
+            box-shadow:0 0 20px rgba(56,189,248,0.5);
+        }
+
+        h2{
+            color:#38bdf8;
+            margin-bottom:15px;
+        }
+
+        p{
+            line-height:1.8;
+        }
+
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
+
+        .info-box{
+            background:rgba(255,255,255,0.08);
+            padding:20px;
+            border-radius:15px;
+            text-align:center;
+        }
+
+        .info-box h3{
+            color:#38bdf8;
+            margin-bottom:10px;
+        }
+
+        footer{
+            text-align:center;
+            padding:20px;
+            background:#020617;
+            margin-top:50px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">TechSada</div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="hero">
+            <h1>About Me</h1>
+            <p>Robotics Enthusiast • AI Learner • Developer • Content Creator</p>
+        </div>
+
+        <div class="card">
+            <h2>Who Am I?</h2>
+            <p>
+                Hello! I'm <strong>Sadashiva Patil</strong>, a B.Tech student in
+                Robotics and Artificial Intelligence. I enjoy building robots,
+                learning new technologies, developing software projects, and
+                exploring the world of automation and AI.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Education</h2>
+            <p>
+                🎓 B.Tech in Robotics & Artificial Intelligence<br>
+                🎓 Diploma in Mechatronics Engineering and Smart Factory (NTTF)
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>My Interests</h2>
+            <p>
+                • Robotics and Automation<br>
+                • Artificial Intelligence<br>
+                • Embedded Systems<br>
+                • Web Development<br>
+                • Content Creation on YouTube<br>
+                • Learning Emerging Technologies
+            </p>
+        </div>
+
+        <div class="grid">
+
+            <div class="info-box">
+                <h3>Programming</h3>
+                <p>Python, Java, HTML, CSS, JavaScript</p>
+            </div>
+
+            <div class="info-box">
+                <h3>Hardware</h3>
+                <p>Arduino, ESP32, Sensors, Servo Motors</p>
+            </div>
+
+            <div class="info-box">
+                <h3>Projects</h3>
+                <p>6-DOF Robotic Arm, Pick & Place Robot</p>
+            </div>
+
+        </div>
+
+        <div class="card" style="margin-top:30px;">
+            <h2>Career Goal</h2>
+            <p>
+                My goal is to become a skilled Robotics and AI Engineer,
+                contribute to innovative technologies, and build intelligent
+                systems that solve real-world problems.
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Sadashiva Patil | TechSada</p>
+    </footer>
+
+</body>
+</html>
+```
