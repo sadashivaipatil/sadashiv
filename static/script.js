@@ -1,38 +1,74 @@
-// Loader
-
 let percent = 0;
 
-let counter = setInterval(() => {
+const progressBar =
+document.getElementById("progress-bar");
+
+const percentage =
+document.getElementById("percentage");
+
+const module1 =
+document.getElementById("module1");
+
+const module2 =
+document.getElementById("module2");
+
+const module3 =
+document.getElementById("module3");
+
+const loaderText =
+document.querySelector(".loader-text");
+
+const counter = setInterval(()=>{
 
     percent++;
 
-    document.getElementById("percentage").innerText =
-        percent + "%";
+    percentage.innerText =
+    percent + "%";
 
-    if (percent >= 100) {
+    progressBar.style.width =
+    percent + "%";
+
+    if(percent === 30){
+
+        module1.innerHTML =
+        "✓ Robotics";
+    }
+
+    if(percent === 60){
+
+        module2.innerHTML =
+        "✓ AI";
+    }
+
+    if(percent === 90){
+
+        module3.innerHTML =
+        "✓ Automation";
+    }
+
+    if(percent >= 100){
 
         clearInterval(counter);
 
-        document.querySelector(".loader-text").innerText =
-            "ACCESS GRANTED";
+        loaderText.innerText =
+        "ACCESS GRANTED";
 
-        setTimeout(() => {
+        setTimeout(()=>{
 
-            document.getElementById("loader").style.opacity = "0";
+            document.getElementById("loader")
+            .style.opacity = "0";
 
-            setTimeout(() => {
+            setTimeout(()=>{
 
-                document.getElementById("loader").style.display =
-                    "none";
+                document.getElementById("loader")
+                .style.display = "none";
 
-            }, 1000);
+            },1000);
 
-        }, 800);
-
+        },1000);
     }
 
-}, 25);
-
+},25);
 
 // Typing Effect
 

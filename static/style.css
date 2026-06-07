@@ -15,89 +15,122 @@ body{
     overflow-x:hidden;
 }
 
-/* Loader */
+/* ==========================
+   ADVANCED LOADER
+========================== */
 
 #loader{
+
     position:fixed;
-    width:100%;
-    height:100vh;
-    background:#000;
-    z-index:9999;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-}
-
-.eye{
-    position:relative;
-    width:180px;
-    height:180px;
-}
-
-.eye-ring{
-    position:absolute;
-    width:100%;
-    height:100%;
-    border:8px solid #BFBFBF;
-    border-radius:50%;
-
-    animation:rotate 4s linear infinite;
-}
-
-.eye-core{
-    position:absolute;
-    width:60px;
-    height:60px;
-    background:#BFBFBF;
-    border-radius:50%;
-
-    top:50%;
-    left:50%;
-
-    transform:translate(-50%,-50%);
-}
-
-.scan-line{
-    position:absolute;
-    width:100%;
-    height:3px;
-    background:#BFBFBF;
 
     top:0;
+    left:0;
 
-    animation:scan 2s ease-in-out infinite;
+    width:100%;
+    height:100%;
+
+    background:#000;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+    transition:1s;
 }
 
-.loader-text{
-    margin-top:40px;
+.loader-container{
+
+    text-align:center;
+
+    width:400px;
+}
+
+.loader-title{
+
+    color:#BFBFBF;
+
     letter-spacing:4px;
+
+    margin-bottom:30px;
+}
+
+.scanner-ring{
+
+    width:120px;
+    height:120px;
+
+    border:3px solid #333;
+
+    border-top:3px solid #BFBFBF;
+
+    border-radius:50%;
+
+    margin:auto;
+
+    animation:spin 1.5s linear infinite;
+}
+
+.progress-container{
+
+    width:100%;
+
+    height:10px;
+
+    background:#222;
+
+    margin:30px 0;
+
+    overflow:hidden;
+}
+
+#progress-bar{
+
+    width:0%;
+
+    height:100%;
+
+    background:#BFBFBF;
+
+    transition:.2s;
 }
 
 #percentage{
-    margin-top:15px;
-    font-size:1.3rem;
+
+    color:white;
+
+    margin-bottom:20px;
 }
 
-@keyframes rotate{
+.loader-status{
+
+    text-align:left;
+
+    margin-bottom:20px;
+}
+
+.loader-status p{
+
+    color:#777;
+
+    margin:8px 0;
+}
+
+.loader-text{
+
+    color:#BFBFBF;
+
+    letter-spacing:2px;
+}
+
+@keyframes spin{
+
     100%{
+
         transform:rotate(360deg);
-    }
-}
-
-@keyframes scan{
-
-    0%{
-        top:0;
-    }
-
-    50%{
-        top:90%;
-    }
-
-    100%{
-        top:0;
     }
 }
 

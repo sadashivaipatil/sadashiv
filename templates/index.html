@@ -46,21 +46,39 @@
 
     <!-- Loading Screen -->
 
-    <div id="loader">
+ <div id="loader">
 
-        <div class="eye">
-            <div class="eye-ring"></div>
-            <div class="eye-core"></div>
-            <div class="scan-line"></div>
-        </div>
+    <div class="loader-container">
 
-        <div class="loader-text">
-            SCANNING USER...
+        <div class="scanner-ring"></div>
+
+        <h2 class="loader-title">
+            INITIALIZING SYSTEM
+        </h2>
+
+        <div class="progress-container">
+
+            <div id="progress-bar"></div>
+
         </div>
 
         <div id="percentage">0%</div>
 
+        <div class="loader-status">
+
+            <p id="module1">○ Robotics</p>
+            <p id="module2">○ AI</p>
+            <p id="module3">○ Automation</p>
+
+        </div>
+
+        <div class="loader-text">
+            Loading Modules...
+        </div>
+
     </div>
+
+</div>
 
     <!-- Noise Overlay -->
 
