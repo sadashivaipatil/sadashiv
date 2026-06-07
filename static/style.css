@@ -2064,3 +2064,74 @@ body.light .social-links a{
     }
 
 }
+.hero-container{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:40px;
+}
+
+.hero-robot{
+
+    width:280px;
+
+    max-width:100%;
+
+    opacity:0.85;
+
+    filter:drop-shadow(
+        0 0 20px rgba(255,255,255,.15)
+    );
+
+    transition:.5s;
+}
+
+.hero-robot:hover{
+
+    transform:
+    translateY(-10px);
+
+    filter:drop-shadow(
+        0 0 30px rgba(255,255,255,.25)
+    );
+}
+@media(max-width:768px){
+
+    .hero-container{
+
+        flex-direction:column;
+    }
+
+    .hero-robot{
+
+        width:180px;
+    }
+
+}
+.hero-robot{
+
+    animation:floatRobot 4s ease-in-out infinite;
+}
+
+@keyframes floatRobot{
+
+    0%{
+
+        transform:translateY(0px);
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+    }
+
+    100%{
+
+        transform:translateY(0px);
+    }
+
+}
