@@ -352,15 +352,11 @@ document
 
 function openVideo(project){
 
-    document.body.style.cursor = "default";
-
     const frame =
     document.getElementById("youtubeFrame");
-
-
     document.getElementById("videoModal")
     .style.display = "flex";
-}
+
     if(project === "carenav"){
 
         frame.src =
@@ -387,7 +383,7 @@ function openVideo(project){
 
     document.getElementById("videoModal")
     .style.display = "flex";
-
+}
 document
 document
 .getElementById("closeVideo")
