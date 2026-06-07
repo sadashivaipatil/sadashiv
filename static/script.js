@@ -274,10 +274,10 @@ function openGallery(project){
 
         images = [
 
-        "assets/images/carenav_arm.jpeg",
-        "assets/images/carenav_arms.jpeg",
-        "assets/images/carenav_armss.jpeg",
-        "assets/images/carenav_armsss.jpeg",
+        "static/assets/images/carenav_arm.jpeg",
+        "static/assets/images/carenav_arms.jpeg",
+        "static/assets/images/carenav_armss.jpeg",
+        "static/assets/images/carenav_armsss.jpeg",
         ];
 
     }
@@ -286,7 +286,7 @@ function openGallery(project){
 
         images = [
 
-        "assets/images/maca.jpeg"
+        "static/assets/images/maca.jpeg"
         
         ];
 
@@ -295,7 +295,7 @@ function openGallery(project){
     else if(project === "6arm"){
 
         images = [
-        "assets/images/6dof.jpeg"
+        "static/assets/images/6dof.jpeg"
         ];
 
     }
@@ -304,7 +304,7 @@ function openGallery(project){
 
         images = [
 
-        "assets/images/diff.jpeg",
+        "static/assets/images/diff.jpeg",
         
         ];
 
@@ -314,8 +314,8 @@ function openGallery(project){
 
         images = [
 
-        "assets/images/inverter.jpeg",
-        "assets/images/inver.jpeg"
+        "static/assets/images/inverter.jpeg",
+        "static/assets/images/inver.jpeg"
         ];
 
     }
