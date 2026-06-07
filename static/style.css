@@ -1539,3 +1539,14 @@ body.light .social-links a{
         display:none;
     }
 }
+
+@media screen and (max-width:768px){
+
+    section{
+
+        padding-top:60px !important;
+
+        padding-bottom:60px !important;
+    }
+
+}
