@@ -351,9 +351,16 @@ document
 
 function openVideo(project){
 
+    document.body.style.cursor = "default";
+
     const frame =
     document.getElementById("youtubeFrame");
 
+    ...
+
+    document.getElementById("videoModal")
+    .style.display = "flex";
+}
     if(project === "carenav"){
 
         frame.src =
@@ -375,13 +382,14 @@ function openVideo(project){
     else if(project === "mecanum"){
 
         frame.src =
-        "https://www.youtube.com/embed/bEUkzuAQzjs";
+        "https://www.youtube.com/embed/MXv_tzdbfM0";
     }
 
     document.getElementById("videoModal")
     .style.display = "flex";
 }
 
+document
 document
 .getElementById("closeVideo")
 .onclick = ()=>{
@@ -391,6 +399,8 @@ document
 
     document.getElementById("youtubeFrame")
     .src = "";
+
+    document.body.style.cursor = "none";
 };
 
 // Theme Toggle
