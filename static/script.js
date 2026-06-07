@@ -1,133 +1,20 @@
-// MATRIX EFFECT
+window.addEventListener("load",()=>{
 
-const canvas =
-document.getElementById("matrix");
+    setTimeout(()=>{
 
-const ctx =
-canvas.getContext("2d");
+        document.getElementById("loader")
+        .style.opacity="0";
 
-canvas.width =
-window.innerWidth;
+        setTimeout(()=>{
 
-canvas.height =
-window.innerHeight;
+            document.getElementById("loader")
+            .style.display="none";
 
-const letters =
-"01";
+        },1000);
 
-const fontSize = 16;
+    },6500);
 
-const columns =
-canvas.width / fontSize;
-
-const drops = [];
-
-for(let x=0;x<columns;x++){
-
-    drops[x]=1;
-}
-
-function draw(){
-
-    ctx.fillStyle=
-    "rgba(0,0,0,0.05)";
-
-    ctx.fillRect(
-        0,
-        0,
-        canvas.width,
-        canvas.height
-    );
-
-    ctx.fillStyle=
-    "#00ff66";
-
-    ctx.font=
-    fontSize+"px monospace";
-
-    for(let i=0;i<drops.length;i++){
-
-        const text=
-        letters.charAt(
-        Math.floor(
-        Math.random()*letters.length
-        ));
-
-        ctx.fillText(
-            text,
-            i*fontSize,
-            drops[i]*fontSize
-        );
-
-        if(
-            drops[i]*fontSize >
-            canvas.height &&
-            Math.random() > 0.975
-        ){
-
-            drops[i]=0;
-        }
-
-        drops[i]++;
-    }
-}
-
-setInterval(draw,35);
-
-const line1 =
-document.getElementById("line1");
-
-const line2 =
-document.getElementById("line2");
-
-const line3 =
-document.getElementById("line3");
-
-const line4 =
-document.getElementById("line4");
-
-setTimeout(()=>{
-
-line1.innerText =
-"> Loading Robotics Core... ✓";
-
-},1000);
-
-setTimeout(()=>{
-
-line2.innerText =
-"> Loading Automation Modules... ✓";
-
-},2500);
-
-setTimeout(()=>{
-
-line3.innerText =
-"> Welcome Sadashiva Patil";
-
-},4000);
-
-setTimeout(()=>{
-
-line4.innerText =
-"> Entering Portfolio...";
-
-},5500);
-
-setTimeout(()=>{
-
-document.getElementById("loader")
-.style.opacity="0";
-
-setTimeout(()=>{
-
-document.getElementById("loader")
-.style.display="none";
-
-},1000);
-
-},7000);
-
+});
 // Typing Effect
 
 const texts = [

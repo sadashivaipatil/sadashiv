@@ -16,7 +16,7 @@ body{
 }
 
 /* ==========================
-   MATRIX LOADER
+   BLUEPRINT LOADER
 ========================== */
 
 #loader{
@@ -29,57 +29,137 @@ body{
     width:100%;
     height:100%;
 
-    background:#000;
+    background:#050505;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
 
     z-index:99999;
-
-    overflow:hidden;
 
     transition:1s;
 }
 
-#matrix{
-
-    position:absolute;
-
-    width:100%;
-    height:100%;
-}
-
-.loader-content{
-
-    position:absolute;
-
-    top:50%;
-    left:50%;
-
-    transform:translate(-50%,-50%);
+.blueprint-loader{
 
     text-align:center;
-
-    z-index:10;
 }
+
+.robot-blueprint{
+
+    width:500px;
+    max-width:90vw;
+
+    margin-bottom:40px;
+}
+
+.draw-line{
+
+    fill:none;
+
+    stroke:#BFBFBF;
+
+    stroke-width:3;
+
+    stroke-dasharray:200;
+
+    stroke-dashoffset:200;
+
+    animation:drawLine 1.5s forwards;
+}
+
+.draw-line:nth-child(2){
+
+    animation-delay:.4s;
+}
+
+.draw-line:nth-child(3){
+
+    animation-delay:.8s;
+}
+
+.draw-line:nth-child(4){
+
+    animation-delay:1.2s;
+}
+
+.joint{
+
+    fill:#222;
+
+    stroke:#BFBFBF;
+
+    stroke-width:2;
+
+    opacity:0;
+}
+
+.j1{ animation:jointGlow .4s forwards 1.6s; }
+.j2{ animation:jointGlow .4s forwards 2s; }
+.j3{ animation:jointGlow .4s forwards 2.4s; }
+.j4{ animation:jointGlow .4s forwards 2.8s; }
+.j5{ animation:jointGlow .4s forwards 3.2s; }
 
 .loader-name{
 
-    font-size:3rem;
+    color:white;
+
+    letter-spacing:8px;
+
+    opacity:0;
+
+    animation:fadeIn 1s forwards 3.8s;
+}
+
+.loader-subtitle{
 
     color:#BFBFBF;
 
-    margin-bottom:40px;
+    letter-spacing:4px;
 
-    letter-spacing:6px;
+    opacity:0;
+
+    animation:fadeIn 1s forwards 4.2s;
 }
 
-.loader-lines p{
+.loader-status{
 
-    color:#00ff66;
+    color:#777;
 
-    font-family:monospace;
+    margin-top:20px;
 
-    margin:10px 0;
+    opacity:0;
 
-    font-size:1.1rem;
+    animation:fadeIn 1s forwards 4.6s;
+}
+
+@keyframes drawLine{
+
+    to{
+
+        stroke-dashoffset:0;
+    }
+}
+
+@keyframes jointGlow{
+
+    to{
+
+        opacity:1;
+
+        fill:#BFBFBF;
+
+        filter:drop-shadow(0 0 8px #BFBFBF);
+    }
+}
+
+@keyframes fadeIn{
+
+    to{
+
+        opacity:1;
+    }
 }
 
 /* Noise */

@@ -44,26 +44,61 @@
 
 <body>
 
-    <!-- MATRIX LOADER -->
+    <div id="loader">
 
-<div id="loader">
+    <div class="blueprint-loader">
 
-    <canvas id="matrix"></canvas>
+        <svg class="robot-blueprint"
+             viewBox="0 0 500 300">
 
-    <div class="loader-content">
+            <!-- Arm Lines -->
+
+            <line class="draw-line"
+                  x1="80" y1="220"
+                  x2="180" y2="220"/>
+
+            <line class="draw-line"
+                  x1="180" y1="220"
+                  x2="250" y2="140"/>
+
+            <line class="draw-line"
+                  x1="250" y1="140"
+                  x2="350" y2="140"/>
+
+            <line class="draw-line"
+                  x1="350" y1="140"
+                  x2="420" y2="90"/>
+
+            <!-- Joints -->
+
+            <circle class="joint j1"
+                    cx="80" cy="220" r="8"/>
+
+            <circle class="joint j2"
+                    cx="180" cy="220" r="8"/>
+
+            <circle class="joint j3"
+                    cx="250" cy="140" r="8"/>
+
+            <circle class="joint j4"
+                    cx="350" cy="140" r="8"/>
+
+            <circle class="joint j5"
+                    cx="420" cy="90" r="8"/>
+
+        </svg>
 
         <h1 class="loader-name">
-            SADASHIVA I PATIL
+            SADASHIVA PATIL
         </h1>
 
-        <div class="loader-lines">
+        <p class="loader-subtitle">
+            ROBOTICS • AUTOMATION
+        </p>
 
-            <p id="line1"></p>
-            <p id="line2"></p>
-            <p id="line3"></p>
-            <p id="line4"></p>
-
-        </div>
+        <p class="loader-status">
+            INITIALIZING SYSTEM...
+        </p>
 
     </div>
 
