@@ -595,92 +595,83 @@ nav a:hover{
    LANGUAGES SECTION
 ========================== */
 
-.languages{
+/* ==========================
+   LANGUAGES
+========================== */
 
-    min-height:100vh;
+.language-grid{
 
-    padding:120px 10%;
-}
+    display:grid;
 
-.language-container{
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
 
-    display:flex;
+    gap:25px;
 
-    flex-wrap:wrap;
-
-    justify-content:center;
-
-    gap:50px;
+    margin-top:50px;
 }
 
 .language-card{
 
+    background:
+    rgba(255,255,255,0.03);
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    padding:30px;
+
     text-align:center;
+
+    transition:.4s;
+
+    backdrop-filter:blur(10px);
 }
 
-.circle{
+.language-card:hover{
 
-    position:relative;
+    transform:translateY(-10px);
 
-    width:150px;
-    height:150px;
-}
+    border-color:#BFBFBF;
 
-.circle svg{
-
-    width:150px;
-    height:150px;
-
-    transform:rotate(-90deg);
-}
-
-.circle svg circle{
-
-    fill:none;
-
-    stroke:#333;
-
-    stroke-width:10;
-
-    cx:70;
-    cy:70;
-    r:60;
-}
-
-.progress{
-
-    stroke:#BFBFBF;
-
-    stroke-dasharray:377;
-
-    stroke-dashoffset:377;
-
-    stroke-linecap:round;
-
-    transition:2s ease;
-}
-
-.number{
-
-    position:absolute;
-
-    top:50%;
-    left:50%;
-
-    transform:translate(-50%,-50%);
-
-    font-size:1.2rem;
-
-    color:white;
-
-    font-weight:600;
+    box-shadow:
+    0 0 20px rgba(191,191,191,0.15);
 }
 
 .language-card h3{
 
-    margin-top:20px;
+    color:#ffffff;
+
+    margin-bottom:15px;
+
+    font-size:1.3rem;
+
+    letter-spacing:2px;
+}
+
+.language-card span{
 
     color:#BFBFBF;
+
+    font-size:0.95rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+}
+.language-badge{
+
+    display:inline-block;
+
+    margin-top:10px;
+
+    padding:8px 18px;
+
+    border:1px solid #BFBFBF;
+
+    color:#BFBFBF;
+
+    font-size:.8rem;
 
     letter-spacing:2px;
 }
