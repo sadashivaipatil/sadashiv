@@ -427,3 +427,72 @@ themeBtn.addEventListener("click",()=>{
     }
 
 });
+// PARALLAX BACKGROUND
+
+const parallaxBg =
+document.querySelector(".parallax-bg");
+
+document.addEventListener("mousemove",(e)=>{
+
+    const x =
+    (window.innerWidth/2 - e.clientX)/50;
+
+    const y =
+    (window.innerHeight/2 - e.clientY)/50;
+
+    parallaxBg.style.transform =
+    `translate(${x}px, ${y}px)`;
+});
+// 3D TILT EFFECT
+
+const tiltCards =
+document.querySelectorAll(".tilt-card");
+
+tiltCards.forEach(card=>{
+
+    card.addEventListener(
+        "mousemove",
+        (e)=>{
+
+        const rect =
+        card.getBoundingClientRect();
+
+        const x =
+        e.clientX - rect.left;
+
+        const y =
+        e.clientY - rect.top;
+
+        const centerX =
+        rect.width/2;
+
+        const centerY =
+        rect.height/2;
+
+        const rotateX =
+        (centerY-y)/12;
+
+        const rotateY =
+        (x-centerX)/12;
+
+        card.style.transform =
+        `perspective(1000px)
+         rotateX(${rotateX}deg)
+         rotateY(${rotateY}deg)
+         scale(1.03)`;
+
+    });
+
+    card.addEventListener(
+        "mouseleave",
+        ()=>{
+
+        card.style.transform =
+        `perspective(1000px)
+         rotateX(0)
+         rotateY(0)
+         scale(1)`;
+
+    });
+
+});

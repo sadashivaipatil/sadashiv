@@ -1835,3 +1835,61 @@ body.light .social-links a{
     }
 
 }
+/* ==========================
+   PARALLAX BACKGROUND
+========================== */
+
+.parallax-bg{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:120%;
+    height:120%;
+
+    background:
+    radial-gradient(
+        circle at center,
+        rgba(255,255,255,0.03),
+        transparent 70%
+    );
+
+    pointer-events:none;
+
+    z-index:-1;
+
+    transition:transform .2s ease-out;
+}
+/* ==========================
+   3D CARD EFFECT
+========================== */
+
+.tilt-card{
+
+    transform-style:preserve-3d;
+
+    transition:
+    transform .15s ease,
+    box-shadow .3s ease;
+}
+
+.tilt-card:hover{
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.4);
+}
+@media(max-width:768px){
+
+    .tilt-card{
+
+        transform:none !important;
+    }
+
+    .parallax-bg{
+
+        display:none;
+    }
+
+}
