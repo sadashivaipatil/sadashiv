@@ -349,6 +349,50 @@ document
     images[currentIndex];
 };
 
+function openVideo(project){
+
+    const frame =
+    document.getElementById("youtubeFrame");
+
+    if(project === "carenav"){
+
+        frame.src =
+        "https://www.youtube.com/embed/LcwLAbNfoEU";
+    }
+
+    else if(project === "arm"){
+
+        frame.src =
+        "https://www.youtube.com/embed/LtemHmxufRA";
+    }
+
+    else if(project === "diff"){
+
+        frame.src =
+        "https://www.youtube.com/embed/36yLaOzTRWM";
+    }
+
+    else if(project === "mecanum"){
+
+        frame.src =
+        "https://www.youtube.com/embed/bEUkzuAQzjs";
+    }
+
+    document.getElementById("videoModal")
+    .style.display = "flex";
+}
+
+document
+.getElementById("closeVideo")
+.onclick = ()=>{
+
+    document.getElementById("videoModal")
+    .style.display = "none";
+
+    document.getElementById("youtubeFrame")
+    .src = "";
+};
+
 // Theme Toggle
 
 const themeBtn =
