@@ -1952,3 +1952,38 @@ body.light .social-links a{
     }
 
 }
+.email-contact{
+
+    margin:25px 0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+}
+
+.email-contact i{
+
+    color:#BFBFBF;
+
+    font-size:1.2rem;
+}
+
+.email-contact a{
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.email-contact a:hover{
+
+    color:#BFBFBF;
+}
