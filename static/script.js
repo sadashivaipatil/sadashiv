@@ -1,74 +1,132 @@
-let percent = 0;
+// MATRIX EFFECT
 
-const progressBar =
-document.getElementById("progress-bar");
+const canvas =
+document.getElementById("matrix");
 
-const percentage =
-document.getElementById("percentage");
+const ctx =
+canvas.getContext("2d");
 
-const module1 =
-document.getElementById("module1");
+canvas.width =
+window.innerWidth;
 
-const module2 =
-document.getElementById("module2");
+canvas.height =
+window.innerHeight;
 
-const module3 =
-document.getElementById("module3");
+const letters =
+"01";
 
-const loaderText =
-document.querySelector(".loader-text");
+const fontSize = 16;
 
-const counter = setInterval(()=>{
+const columns =
+canvas.width / fontSize;
 
-    percent++;
+const drops = [];
 
-    percentage.innerText =
-    percent + "%";
+for(let x=0;x<columns;x++){
 
-    progressBar.style.width =
-    percent + "%";
+    drops[x]=1;
+}
 
-    if(percent === 30){
+function draw(){
 
-        module1.innerHTML =
-        "✓ Robotics";
+    ctx.fillStyle=
+    "rgba(0,0,0,0.05)";
+
+    ctx.fillRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+    ctx.fillStyle=
+    "#00ff66";
+
+    ctx.font=
+    fontSize+"px monospace";
+
+    for(let i=0;i<drops.length;i++){
+
+        const text=
+        letters.charAt(
+        Math.floor(
+        Math.random()*letters.length
+        ));
+
+        ctx.fillText(
+            text,
+            i*fontSize,
+            drops[i]*fontSize
+        );
+
+        if(
+            drops[i]*fontSize >
+            canvas.height &&
+            Math.random() > 0.975
+        ){
+
+            drops[i]=0;
+        }
+
+        drops[i]++;
     }
+}
 
-    if(percent === 60){
+setInterval(draw,35);
 
-        module2.innerHTML =
-        "✓ AI";
-    }
+const line1 =
+document.getElementById("line1");
 
-    if(percent === 90){
+const line2 =
+document.getElementById("line2");
 
-        module3.innerHTML =
-        "✓ Automation";
-    }
+const line3 =
+document.getElementById("line3");
 
-    if(percent >= 100){
+const line4 =
+document.getElementById("line4");
 
-        clearInterval(counter);
+setTimeout(()=>{
 
-        loaderText.innerText =
-        "ACCESS GRANTED";
+line1.innerText =
+"> Loading Robotics Core... ✓";
 
-        setTimeout(()=>{
+},1000);
 
-            document.getElementById("loader")
-            .style.opacity = "0";
+setTimeout(()=>{
 
-            setTimeout(()=>{
+line2.innerText =
+"> Loading Automation Modules... ✓";
 
-                document.getElementById("loader")
-                .style.display = "none";
+},2500);
 
-            },1000);
+setTimeout(()=>{
 
-        },1000);
-    }
+line3.innerText =
+"> Welcome Sadashiva Patil";
 
-},25);
+},4000);
+
+setTimeout(()=>{
+
+line4.innerText =
+"> Entering Portfolio...";
+
+},5500);
+
+setTimeout(()=>{
+
+document.getElementById("loader")
+.style.opacity="0";
+
+setTimeout(()=>{
+
+document.getElementById("loader")
+.style.display="none";
+
+},1000);
+
+},7000);
 
 // Typing Effect
 

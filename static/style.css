@@ -16,7 +16,7 @@ body{
 }
 
 /* ==========================
-   ADVANCED LOADER
+   MATRIX LOADER
 ========================== */
 
 #loader{
@@ -31,107 +31,55 @@ body{
 
     background:#000;
 
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
     z-index:99999;
+
+    overflow:hidden;
 
     transition:1s;
 }
 
-.loader-container{
+#matrix{
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+}
+
+.loader-content{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
 
     text-align:center;
 
-    width:400px;
+    z-index:10;
 }
 
-.loader-title{
+.loader-name{
+
+    font-size:3rem;
 
     color:#BFBFBF;
 
-    letter-spacing:4px;
+    margin-bottom:40px;
 
-    margin-bottom:30px;
+    letter-spacing:6px;
 }
 
-.scanner-ring{
+.loader-lines p{
 
-    width:120px;
-    height:120px;
+    color:#00ff66;
 
-    border:3px solid #333;
+    font-family:monospace;
 
-    border-top:3px solid #BFBFBF;
+    margin:10px 0;
 
-    border-radius:50%;
-
-    margin:auto;
-
-    animation:spin 1.5s linear infinite;
-}
-
-.progress-container{
-
-    width:100%;
-
-    height:10px;
-
-    background:#222;
-
-    margin:30px 0;
-
-    overflow:hidden;
-}
-
-#progress-bar{
-
-    width:0%;
-
-    height:100%;
-
-    background:#BFBFBF;
-
-    transition:.2s;
-}
-
-#percentage{
-
-    color:white;
-
-    margin-bottom:20px;
-}
-
-.loader-status{
-
-    text-align:left;
-
-    margin-bottom:20px;
-}
-
-.loader-status p{
-
-    color:#777;
-
-    margin:8px 0;
-}
-
-.loader-text{
-
-    color:#BFBFBF;
-
-    letter-spacing:2px;
-}
-
-@keyframes spin{
-
-    100%{
-
-        transform:rotate(360deg);
-    }
+    font-size:1.1rem;
 }
 
 /* Noise */
