@@ -1550,3 +1550,51 @@ body.light .social-links a{
     }
 
 }
+@media screen and (max-width:768px){
+
+    .contact-content{
+
+        width:100%;
+
+        padding:0 15px;
+
+        box-sizing:border-box;
+    }
+
+    .contact-links{
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:15px;
+
+        align-items:center;
+    }
+
+    .contact-links a{
+
+        width:100%;
+
+        max-width:300px;
+
+        word-break:break-word;
+
+        text-align:center;
+    }
+
+}
+@media screen and (max-width:768px){
+
+    .social-links{
+
+        display:flex;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:15px;
+    }
+
+}
