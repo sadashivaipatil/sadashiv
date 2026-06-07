@@ -4,12 +4,18 @@
 
 <style>
 .st0{
+    .st0{
     fill:none;
     stroke:#BFBFBF;
     stroke-width:2;
     stroke-linecap:round;
     stroke-linejoin:round;
-    filter:drop-shadow(0 0 6px #BFBFBF);
+
+    stroke-dasharray:1200;
+    stroke-dashoffset:1200;
+
+    animation:drawRobot 3s forwards;
+}
 }
 </style>
 

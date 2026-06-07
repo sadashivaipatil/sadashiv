@@ -1794,3 +1794,10 @@ body.light .social-links a{
         top:110%;
     }
 }
+@keyframes drawRobot{
+
+    to{
+
+        stroke-dashoffset:0;
+    }
+}
