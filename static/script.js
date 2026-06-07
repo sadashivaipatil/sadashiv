@@ -1,3 +1,4 @@
+console.log("SCRIPT LOADED");
 window.addEventListener("load",()=>{
 
     setTimeout(()=>{
@@ -356,7 +357,6 @@ function openVideo(project){
     const frame =
     document.getElementById("youtubeFrame");
 
-    ...
 
     document.getElementById("videoModal")
     .style.display = "flex";
@@ -387,7 +387,6 @@ function openVideo(project){
 
     document.getElementById("videoModal")
     .style.display = "flex";
-}
 
 document
 document
