@@ -1647,7 +1647,7 @@ body.light .social-links a{
 
     align-items:center;
 
-    z-index:9999;
+    z-index:1000;
 }
 
 #youtubeFrame{
