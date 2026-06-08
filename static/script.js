@@ -13,7 +13,7 @@ window.addEventListener("load",()=>{
 
         },1000);
 
-    },6000);
+    },4000);
 
 });
 // Typing Effect
