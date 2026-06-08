@@ -11,7 +11,7 @@ window.addEventListener("load",()=>{
             document.getElementById("loader")
             .style.display="none";
 
-        },900);
+        },1000);
 
     },2000);
 
