@@ -2147,3 +2147,17 @@ body.light .social-links a{
         transform:translateY(-10vh);
     }
 }
+@media screen and (max-width:768px){
+
+    .resume-buttons{
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:20px;
+    }
+
+}
