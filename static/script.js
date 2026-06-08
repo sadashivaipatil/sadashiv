@@ -11,9 +11,9 @@ window.addEventListener("load",()=>{
             document.getElementById("loader")
             .style.display="none";
 
-        },500);
+        },1000);
 
-    },1000);
+    },6000);
 
 });
 // Typing Effect
