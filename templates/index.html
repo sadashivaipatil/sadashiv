@@ -19,6 +19,18 @@
     <!-- Font Awesome -->
 
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+    .project-card{
+       transition: transform 0.3s ease;
+    }
+
+    .project-card:hover{
+        transform:
+           rotateX(5deg)
+           rotateY(-5deg)
+           translateY(-10px);
+    }
+    </style>
 </head>
 
 <body>
@@ -481,8 +493,8 @@
 
 <h2>Latest Project</h2>
 
-<div class="project-section">
-
+<div class="project-card">
+    
 <img src="{{ url_for('static', filename='arm.svg') }}"
      alt="CareNav Robotic Arm"
      class="project-image">
@@ -520,7 +532,7 @@
                 <h2>CareNav System</h2>
 
                 <span class="project-date">
-                    Jan - Apr 2026
+                    Jan - Present
                 </span>
 
                 <p>
