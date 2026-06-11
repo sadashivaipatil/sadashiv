@@ -19,49 +19,6 @@
     <!-- Font Awesome -->
 
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <style>
-    .project-card{
-    transition: transform 0.3s ease;
-    }
-
-    .project-card:hover{
-    transform:
-       rotateX(5deg)
-       rotateY(-5deg)
-       translateY(-10px);
-       }
-
- /* CareNav Project Section */
-    .carenav-project{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:50px;
-    margin:50px 0;
-     }
-
-    .arm-image{
-    width:300px;
-    max-width:100%;
-    }
-
-    .project-text{
-    max-width:600px;
-    }
-
- /* Mobile View */
-  @media (max-width:768px){
-
-    .carenav-project{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .arm-image{
-        width:220px;
-    }
-   }
-  </style>
 </head>
 
 <body>
@@ -520,29 +477,6 @@
 
 <!-- PROJECTS SECTION -->
 
-<!-- Latest Project -->
-
-<h2>Latest Project</h2>
-
-<div class="carenav-project">
-
-    <img src="{{ url_for('static', filename='arm.svg') }}"
-         alt="CareNav Robotic Arm"
-         class="arm-image">
-
-    <div class="project-text">
-        <h2>CareNav Pick & Place Robotic Arm</h2>
-
-        <p>
-            This 6-DOF Robotic Arm is my latest project and a key component of my major project, CareNav.
-            The system is designed to perform pick-and-place medicine boxes in hospitals.
-            The robotic arm combines mechanical design, embedded systems, and intelligent control.
-            Through this project, I gained hands-on experience in servo control and system integration.
-        </p>
-    </div>
-
-</div>
-
 <section class="projects" id="projects">
 
     <div class="section-title">
@@ -559,15 +493,16 @@
 
             <div class="project-content">
 
-                <h2>CareNav System</h2>
+                <h2>6 DOF Robotic Arm</h2>
 
                 <span class="project-date">
-                    Jan - Present
+                    Jan - Apr 2026
                 </span>
 
                 <p>
-                    Built and assembled a 6-DOF robotic arm for the CareNav project using NEMA 17 stepper motors and TB6600 drivers for precise motion control. In addition, our team is developing an autonomous mobile robot that will work alongside the robotic arm. The integrated system is designed to automate medicine delivery in healthcare environments, where the robotic arm will pick and place medicine boxes onto the mobile robot, and the robot will then navigate autonomously to deliver the medicine to the patient's room. This project combines robotics, automation, motion control, and intelligent navigation to create a complete assistive healthcare solution.
-
+                    Built and assembled a 6-DOF robotic arm for the
+                    CareNav project using NEMA 17 stepper motors
+                    and TB6600 drivers for precise motion control.
                 </p>
 
                 <div class="tech-stack">
