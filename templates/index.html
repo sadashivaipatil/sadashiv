@@ -21,16 +21,47 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <style>
     .project-card{
-       transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
     }
 
     .project-card:hover{
-        transform:
-           rotateX(5deg)
-           rotateY(-5deg)
-           translateY(-10px);
+    transform:
+       rotateX(5deg)
+       rotateY(-5deg)
+       translateY(-10px);
+       }
+
+ /* CareNav Project Section */
+    .carenav-project{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:50px;
+    margin:50px 0;
+     }
+
+    .arm-image{
+    width:300px;
+    max-width:100%;
     }
-    </style>
+
+    .project-text{
+    max-width:600px;
+    }
+
+ /* Mobile View */
+  @media (max-width:768px){
+
+    .carenav-project{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .arm-image{
+        width:220px;
+    }
+   }
+  </style>
 </head>
 
 <body>
@@ -493,23 +524,22 @@
 
 <h2>Latest Project</h2>
 
-<div class="project-card">
-    
-<img src="{{ url_for('static', filename='arm.svg') }}"
-     alt="CareNav Robotic Arm"
-     class="project-image">
+<div class="carenav-project">
 
-<div>
-    <h3>CareNav Pick & Place Robotic Arm</h3>
+    <img src="{{ url_for('static', filename='arm.svg') }}"
+         alt="CareNav Robotic Arm"
+         class="arm-image">
 
-    <p>
-        This 6-DOF Robotic Arm is my latest project and a key component of my major project, CareNav.
-        The system is designed to perform pick-and-place medicine boxes in hospitals. The robotic arm combines mechanical design,
-        embedded systems, and intelligent control.
-        Through this project, I gained hands-on experience in servo control,
-        and system integration.
-    </p>
-</div>
+    <div class="project-text">
+        <h2>CareNav Pick & Place Robotic Arm</h2>
+
+        <p>
+            This 6-DOF Robotic Arm is my latest project and a key component of my major project, CareNav.
+            The system is designed to perform pick-and-place medicine boxes in hospitals.
+            The robotic arm combines mechanical design, embedded systems, and intelligent control.
+            Through this project, I gained hands-on experience in servo control and system integration.
+        </p>
+    </div>
 
 </div>
 
