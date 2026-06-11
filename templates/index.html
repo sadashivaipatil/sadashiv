@@ -19,67 +19,6 @@
     <!-- Font Awesome -->
 
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-<style>
-body{
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 10px;
-}
-
-.about-section{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
-.profile-pic{
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center top;
-    border: 5px solid #2563EB;
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
-}
-
-.social-links{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-/* Mobile View */
-@media (max-width: 768px){
-
-    .about-section{
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .profile-pic{
-        width: 140px;
-        height: 140px;
-    }
-
-    h1{
-        font-size: 24px;
-    }
-
-    h2{
-        font-size: 20px;
-    }
-
-    h3{
-        font-size: 16px;
-    }
-
-    .social-links{
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-}
-</style>
 </head>
 
 <body>
@@ -262,7 +201,7 @@ body{
 
         <div class="about-image reveal-left">
 
-            <img src="{{ url_for('static', filename='assets/images/pfp.jpeg') }}" alt="Sadashiva" class="profile-pic">
+            <img src="{{ url_for('static', filename='assets/images/pfp.jpeg') }}" alt="Sadashiva">
 
         </div>
 
@@ -292,29 +231,35 @@ body{
     </div>
 
 </section>
-
-<div class="about-section">
-
-    <div>
-
-        <h1 style="color:#2563EB;">
-            Robotics • Automation
-        </h1>
-
-        <p style="font-size:20px; max-width:600px;">
-            Building intelligent robotic systems
-        </p>
-    </div>
-
-    <img src="{{ url_for('static', filename='arm.svg') }}"
-         alt="Robotic Arm"
-         style="
-            width:450px;
-            max-width:100%;
-         ">
-</div>
+<!-- Latest Project -->
 
 <hr>
+
+<h2>Latest Project</h2>
+
+<div class="project-section">
+
+```
+<img src="{{ url_for('static', filename='arm.svg') }}"
+     alt="CareNav Robotic Arm"
+     class="project-image">
+
+<div>
+    <h3>CareNav - Smart Assistive Robotic Arm</h3>
+
+    <p>
+        This 6-DOF Robotic Arm is my latest project and a key component of my major project, CareNav.
+        The system is designed to assist elderly and differently-abled individuals by performing
+        object handling and pick-and-place operations. The robotic arm combines mechanical design,
+        embedded systems, and intelligent control to provide practical assistance in daily tasks.
+
+        Through this project, I gained hands-on experience in robotics, servo control,
+        ESP32 programming, automation, and system integration.
+    </p>
+</div>
+```
+
+</div>
 
 <!-- EDUCATION & EXPERIENCE -->
 
